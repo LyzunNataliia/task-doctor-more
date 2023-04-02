@@ -121,8 +121,7 @@ p {
     minmax(50px, 140px) minmax(170px, 340px) minmax(110px, 188px)
     minmax(80px, 112px) 1fr;
   max-height: 700px;
-  /* max-width: 90%; */
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   /* padding: 20px 0px; */
 }
 .hero-content-heading {
@@ -130,7 +129,7 @@ p {
   max-height: 280px;
   grid-row: 1/2;
   grid-column: 2/4;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 
   border-radius: 0 0 0 140px;
   background: #ffffff;
@@ -163,7 +162,7 @@ p {
 .hero-content-form {
   grid-row: 3/4;
   grid-column: 3/5;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -243,7 +242,6 @@ p {
   position: relative;
   background-color: transparent;
   padding-bottom: 20px;
-  /* margin-bottom: 85px; */
   /* outline: 2px solid #ce007e; */
 }
 .section-info-product__container {
@@ -316,7 +314,7 @@ p {
 /* ***section-description-product*** */
 .section-description-product {
   padding-top: 80px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 .section-description-product-content {
   position: relative;
@@ -445,4 +443,64 @@ p {
   width: 200px;
   transform: translate(-100%, 96%);
   background-image: url(/img/section-description-right3.svg);
+}
+
+/* ***section-molecul*** */
+
+.section-molecul {
+  padding-top: 20px;
+}
+.section-molecul-bg__img {
+  display: block;
+  max-height: 986px;
+  background-color: transparent;
+}
+.section-molecul-container {
+  display: flex;
+  justify-content: end;
+}
+.section-molecul-content {
+  max-height: 1070px;
+  background-image: url(/img/section-molecul-girl.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+.molecul-content {
+  max-width: 50%;
+  padding-bottom: 74px;
+  display: grid;
+  grid-template-rows: 1fr minmax(400px 1fr) 1fr;
+}
+
+.molecul-content-headline {
+  font-size: 30px;
+  line-height: 37px;
+  padding-left: 12px;
+}
+.molecul-content-headline:not(.molecul-content-headline__color) {
+  color: #211f20;
+}
+.molecul-content-headline__color {
+  color: #ce007e;
+}
+.molecul-content-text {
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #000000;
+
+  opacity: 0.7;
+}
+.molecul-content-img__molecula {
+  width: 519px;
+  height: 380px;
+  /* width: 100%;
+  height: 100%; */
+  background-image: url(/img/section-molecul_molecula.jpg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: left top;
+  background-size: contain;
 }
