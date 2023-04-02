@@ -326,14 +326,15 @@ p {
   justify-content: space-between;
 }
 .section-description-product__title {
-  padding-top: 0;
-  padding-bottom: 56px;
-  max-width: 650px;
+  padding: 0 10px 56px 10px;
+  max-width: 644px;
   font-size: 30px;
   line-height: 37px;
   text-align: center;
 
   color: #3c3b3c;
+
+  margin: 0 auto;
 }
 .section-description-product-content {
   display: grid;
@@ -352,12 +353,12 @@ p {
 }
 .section-descriprion-product__list {
   list-style: none;
+  padding: 0;
 }
 .section-description-product__item:not(:last-child) {
   margin-bottom: 42px;
 }
 .section-description-item__title {
-  position: relative;
   margin-top: 0;
   margin-bottom: 12px;
   padding: 0;
@@ -368,6 +369,41 @@ p {
 
   color: #ce007e;
 }
+.description-title-left-one,
+.description-title-left-two,
+.description-title-left-three {
+  position: relative;
+}
+.description-title-left-one::after,
+.description-title-left-two::after,
+.description-title-left-three::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 360px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  outline: 1px solid red;
+}
+.description-title-left-one::after {
+  width: 360px;
+  height: 110px;
+  background-size: auto 100%;
+  transform: translate(70%, 90%);
+  background-image: url(/img/section-description-left1.svg);
+}
+.description-title-left-two::after {
+  transform: translate(68%, 86%);
+  background-image: url(/img/section-description-left2.svg);
+}
+.description-title-left-three::after {
+  transform: translate(89%, 84%);
+  max-width: 250px;
+  background-image: url(/img/section-description-left3.svg);
+}
 .section-description-item__text {
   padding: 0;
   font-size: 12px;
@@ -376,4 +412,37 @@ p {
   color: #3c3b3c;
 
   opacity: 0.8;
+}
+.description-title-right__one,
+.description-title-right__two,
+.description-title-right__three {
+  position: relative;
+}
+.description-title-right__one::before,
+.description-title-right__two::before,
+.description-title-right__three::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 70%;
+}
+.description-title-right__one::before {
+  width: 240px;
+  transform: translate(-116%, 96%);
+  background-image: url(/img/section-description-right1.svg);
+}
+.description-title-right__two::before {
+  width: 200px;
+  transform: translate(-110%, 94%);
+  background-image: url(/img/section-description-right2.svg);
+}
+.description-title-right__three::before {
+  width: 200px;
+  transform: translate(-100%, 96%);
+  background-image: url(/img/section-description-right3.svg);
 }
