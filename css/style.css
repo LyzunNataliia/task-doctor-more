@@ -307,7 +307,7 @@ p {
   /* outline: 2px solid blue; */
   background-image: url(/img/info-product-v24.svg);
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: center bottom;
   background-size: contain;
 }
 
@@ -449,22 +449,34 @@ p {
 
 .section-molecul {
   padding-top: 20px;
+  position: relative;
 }
-.section-molecul-bg__img {
+.section-molecul::before {
+  content: "";
+  height: 960px;
+  width: 100%;
+  position: absolute;
+  background-image: url(/img/section-molecul-bg-v2.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 100%;
+}
+/* .section-molecul-bg__img {
   display: block;
   max-height: 986px;
   background-color: transparent;
-}
+} */
 .section-molecul-container {
   display: flex;
   justify-content: end;
 }
 .section-molecul-content {
+  padding-top: 860px;
   max-height: 1070px;
-  background-image: url(/img/section-molecul-girl.jpg);
+  /* background-image: url(/img/section-molecul-girl.jpg);
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: contain;
+  background-size: contain; */
 }
 .molecul-content {
   max-width: 50%;
@@ -473,15 +485,15 @@ p {
   grid-template-rows: 1fr minmax(400px 1fr) 1fr;
 }
 
-.molecul-content-headline {
+.content-headline {
   font-size: 30px;
   line-height: 37px;
   padding-left: 12px;
 }
-.molecul-content-headline:not(.molecul-content-headline__color) {
+.content-headline:not(.content-headline__color) {
   color: #211f20;
 }
-.molecul-content-headline__color {
+.content-headline__color {
   color: #ce007e;
 }
 .molecul-content-text {
@@ -502,5 +514,70 @@ p {
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: left top;
+  background-size: contain;
+}
+
+/* ***section-laminaria*** */
+.section-laminaria {
+  margin-top: 800px;
+}
+.section-laminaria__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: center;
+}
+/* .section-laminaria__item:nth-child(4n) {
+  margin-left: 20px;
+} */
+.section-laminaria__item {
+  flex: 1 1 auto;
+
+  max-width: 370px;
+  padding: 30px;
+  background: #ce007e;
+  box-shadow: 0px 4px 10px rgba(206, 0, 126, 0.5);
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-laminaria-formula,
+.section-laminaria-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.section-laminaria-formula__text,
+.section-laminaria-wrap__text {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(206, 0, 126, 0.5);
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #000000;
+}
+.section-laminaria-formula__img {
+  width: 600px;
+  height: 100px;
+  background-image: url(/img/section-laminaria-formula.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.section-laminaria-wrap__img {
+  width: 600px;
+  height: 100px;
+  background-image: url(/img/section-laminaria-vitam.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
 }
